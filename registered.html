@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            color: black;
+        }
+        .registered_box{
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            position:relative;
+        }
+        .registered_box .user_box{
+            text-align: center;
+            margin: 20px 0;
+        }
+        .user_box .user_name,
+        .pwd_box .pwd_name
+        {
+            width: 75px;
+            display: inline-block;
+            text-align-last:justify;
+        }
+        .pwd_one{
+            margin-bottom:20px;
+        }
+        .registered_box .pwd_box {
+            text-align: center;
+        }
+        .btn{
+            position:absolute;
+            bottom: 91px;
+            left: 36%;
+        }
+        .btn .registered{
+            border: 1px solid #000;
+            background: white;
+            font-size: 16px;
+            padding:5px;
+            margin-right:10px;
+            cursor: pointer;
+        }
+        .btn .back{
+            display: inline-block;
+            border: 1px solid #000;
+            padding:5px;
+        }
+        .prompt{
+            color:red;
+            display: none;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="registered.js"></script>
+</head>
+<body>
+<form action="registered.php" method="post">
+    <div class="registered_box">
+        <div class="user_box">
+            <span class="user_name">用户名</span>
+            :
+            <input type="text" class="user" name="user">
+        </div>
+        <div class="pwd_box">
+            <div class="pwd_one">
+                <span class="pwd_name">密码</span>
+                :
+                <input type="password" class="pwd1" name="pwd_one">
+            </div>
+            <div class="pwd_two">
+                <span class="pwd_name">确认密码</span>
+                :
+                <input type="password" class="pwd2" name="pwd_two">
+            </div>
+            <span class="prompt">两次填写的密码不一样</span>
+        </div>
+        <div class="btn">
+            <input type="submit" value="注册" class="registered" disabled="true">
+            <div class="back"><a href="login.html">返回</a></div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
